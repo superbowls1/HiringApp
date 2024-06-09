@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Person.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Person.java</font>
+</center></td></tr></table>
+<pre>
+
+<span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">util</span><span class="s2">.</span><span class="s0">ArrayList</span><span class="s2">;</span>
+<span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">util</span><span class="s2">.</span><span class="s0">List</span><span class="s2">;</span>
+
+<span class="s1">public class </span><span class="s0">Person </span><span class="s2">{</span>
+    <span class="s1">private </span><span class="s0">String name</span><span class="s2">;</span>
+    <span class="s1">private </span><span class="s0">String major</span><span class="s2">;</span>
+    <span class="s1">private </span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">skills</span><span class="s2">;</span>
+    <span class="s1">public </span><span class="s0">Person</span><span class="s2">(</span><span class="s0">String name</span><span class="s2">, </span><span class="s0">String major</span><span class="s2">, </span><span class="s0">String</span><span class="s2">[] </span><span class="s0">skills</span><span class="s2">){</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">name</span><span class="s2">=</span><span class="s0">name</span><span class="s2">;</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">major</span><span class="s2">=</span><span class="s0">major</span><span class="s2">;</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">skills</span><span class="s2">= </span><span class="s1">new </span><span class="s0">ArrayList</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">for</span><span class="s2">(</span><span class="s0">String skill </span><span class="s2">: </span><span class="s0">skills</span><span class="s2">){</span>
+            <span class="s1">this</span><span class="s2">.</span><span class="s0">skills</span><span class="s2">.</span><span class="s0">add</span><span class="s2">(</span><span class="s0">skill</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+
+
+    <span class="s1">public </span><span class="s0">String getName</span><span class="s2">() {</span>
+        <span class="s1">return </span><span class="s0">name</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">public void </span><span class="s0">setName</span><span class="s2">(</span><span class="s0">String name</span><span class="s2">){</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">name</span><span class="s2">=</span><span class="s0">name</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">public </span><span class="s0">String getMajor</span><span class="s2">() {</span>
+        <span class="s1">return </span><span class="s0">major</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">public void </span><span class="s0">setMajor</span><span class="s2">(</span><span class="s0">String Major</span><span class="s2">){</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">major</span><span class="s2">=</span><span class="s0">major</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">public </span><span class="s0">List </span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">getSkills</span><span class="s2">(){</span>
+        <span class="s1">return </span><span class="s0">skills</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s1">public void </span><span class="s0">setSkills</span><span class="s2">(</span><span class="s0">List</span><span class="s2">&lt;</span><span class="s0">String</span><span class="s2">&gt; </span><span class="s0">skills</span><span class="s2">){</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">skills</span><span class="s2">=</span><span class="s0">skills</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">@Override</span>
+    <span class="s1">public </span><span class="s0">String toString</span><span class="s2">(){</span>
+        <span class="s1">return </span><span class="s3">&quot;Person&quot; </span><span class="s2">+ </span><span class="s0">name </span><span class="s2">+ </span><span class="s3">&quot; major&quot; </span><span class="s2">+ </span><span class="s0">major</span><span class="s2">+ </span><span class="s3">&quot; skillList &quot; </span><span class="s2">+ </span><span class="s0">skills</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+
+
+
+    <span class="s4">//new applicants, current employees, past employees</span>
+
+    <span class="s4">//Item 3. in Assign 4 Document.</span>
+
+    <span class="s4">//define data fields: name, degree, skill list (&quot;Java, C#, C++&quot;, etc.)</span>
+    <span class="s4">//  skill list: must be array list or linked list</span>
+
+
+    <span class="s4">//define the constructor with given name, degree, and skill list</span>
+
+    <span class="s4">//define getters</span>
+
+    <span class="s4">//define setters</span>
+
+    <span class="s4">//define toString()</span>
+
+<span class="s2">}</span>
+
+</pre>
+</body>
+</html>
